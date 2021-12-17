@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Post your Reviews!</title>
         <link rel="stylesheet" href="./style.css" />
-        <script src="./script.js" defer></script>
+        <link rel="icon" href="./favicon.png" type="image/x-icon" />
+        <script src=" https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
         <script
             src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -22,12 +24,24 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"
         ></script>
+        <script src="./script.js" defer></script>
     </head>
     <body>
-        <div class="alert alert-success success-message" role="alert">
-            A simple success alert—check it out!
+        <div
+            class="alert alert-success alert-dismissible fade success-message"
+            role="alert"
+        >
+            <strong>Success!</strong> Your feedback was saved successfully.
+            <button
+                type="button"
+                class="close"
+                data-dismiss="alert"
+                aria-label="Close"
+            >
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
-        <form action="#">
+        <form>
             <label>
                 Your Name
                 <br />
